@@ -13,7 +13,6 @@ public class GroovyRuntimeDocWriter {
     private OutputTool output;
     private GroovyRuntimeDocTemplateEngine templateEngine;
     private static final String FS = "/";
-    private static final String BSS = "\\";
     private Properties properties;
 
     public GroovyRuntimeDocWriter(OutputTool output, GroovyRuntimeDocTemplateEngine templateEngine, Properties properties) {
@@ -29,7 +28,7 @@ public class GroovyRuntimeDocWriter {
     }
 
     public void writeClassToOutput(ClassDoc classDoc, String destDir) throws Exception {
-        String destFileName = destDir + BSS + classDoc.getFullPathName() + ".html";
+        String destFileName = destDir + FS + classDoc.getFullPathName() + ".html";
         System.out.println("Generating " + destFileName);
         String renderedSrc = templateEngine.applyClassTemplates(classDoc);
         output.writeToOutput(destFileName, renderedSrc);

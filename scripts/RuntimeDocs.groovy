@@ -13,8 +13,8 @@ import org.codehaus.groovy.tools.groovydoc.OutputTool
 includeTargets << grailsScript("_GrailsBootstrap")
 includeTargets << grailsScript("_GrailsRun")
 
-javaDocDir = "${grailsSettings.docsOutputDir}\\api"
-groovyDocDir = "${grailsSettings.docsOutputDir}\\gapi"
+javaDocDir = "${grailsSettings.docsOutputDir}/api"
+groovyDocDir = "${grailsSettings.docsOutputDir}/gapi"
 docEncoding = "UTF-8"
 docSourceLevel = "1.5"
 links = ['http://java.sun.com/j2se/1.5.0/docs/api/']
